@@ -1,0 +1,32 @@
+.programs {
+  width: (calc(100vw - 40px));
+  margin: 0 auto 21px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: calc(100vw - 60px);
+    margin-bottom: 45px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 1220px;
+    margin-bottom: 71px;
+  }
+}
+
+.programs__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 21px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media screen and (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}

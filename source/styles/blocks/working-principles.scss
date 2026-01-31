@@ -1,0 +1,131 @@
+.working-principles {
+  padding: 0 20px 49px;
+
+  @media screen and (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+    padding: 0 30px 47px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 110px 69px;
+  }
+}
+
+.working-principles__title {
+  margin-top: 0;
+  margin-bottom: 41px;
+  color: $dark-text;
+  letter-spacing: -0.8px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 32px;
+    letter-spacing: -1.3px;
+  }
+}
+
+.working-principles__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: item-number;
+
+  @media screen and (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px 63px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 75px;
+  }
+}
+
+.working-principles__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  counter-increment: item-number;
+
+  @media screen and (min-width: $tablet-width) {
+    grid-template: auto 1fr / 1fr;
+    gap: 31px;
+    width: 250px;
+    min-height: 280px;
+  }
+}
+
+.working-principles__item::after {
+  @media screen and (min-width: $tablet-width) {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    display: block;
+    content: counter(item-number);
+    font-family: $title-font;
+    font-size: 280px;
+    line-height: 280px;
+    color: $site-secondary-bg;
+    transform: translateX(-2px);
+  }
+}
+
+.working-principles__item--1::after {
+  transform: translateX(-24px);
+}
+
+.working-principles__item--2::after {
+  transform: translateX(-4px);
+}
+
+.working-principles__icon {
+  width: 60px;
+  height: 60px;
+  background-color: $primary-decoration-color;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-top: 40px;
+  }
+}
+
+.working-principles__icon--1 {
+  background-image: url("../../icons/stack.svg#working-principle-1");
+  background-size: 25px 28px;
+}
+
+.working-principles__icon--2 {
+  background-image: url("../../icons/stack.svg#working-principle-2");
+  background-size: 26px 29px;
+}
+
+.working-principles__icon--3 {
+  background-image: url("../../icons/stack.svg#working-principle-3");
+  background-size: 25px 30px;
+}
+
+.working-principles__icon--4 {
+  background-image: url("../../icons/stack.svg#working-principle-4");
+  background-size: 26px 31px;
+}
+
+.working-principles__description {
+  align-self: center;
+  margin: -2px 0 0;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media screen and (min-width: $tablet-width) {
+    align-self: stretch;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

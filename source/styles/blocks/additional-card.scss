@@ -1,0 +1,88 @@
+.additional-card {
+  display: grid;
+  grid-template: auto/ 1fr;
+  grid-template-areas:
+    "additional-card-title"
+    "additional-card-parameter-wrapper"
+    "additional-card-link-button";
+  padding-top: 12px;
+  padding-bottom: 19px;
+  font-size: 14px;
+  line-height: 20px;
+  border-bottom: 1px solid #cdcdcd;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "additional-card-title       additional-card-parameter-wrapper"
+      "additional-card-link-button additional-card-link-button";
+    padding: 25px 38px 28px;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 244px;
+    grid-template-areas: "additional-card-title additional-card-parameter-wrapper additional-card-link-button";
+    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 16px;
+  }
+}
+
+.additional-card:first-child {
+  border-top: 1px solid #cdcdcd;
+}
+
+.additional-card__title {
+  grid-area: additional-card-title;
+  margin: 0 0 10px;
+  font-family: $title-font;
+  font-size: 16px;
+  line-height: 100%;
+  color: $dark-gray-text-2;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.additional-card dl {
+  grid-area: additional-card-parameter-wrapper;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+    margin-bottom: 21px;
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+}
+
+.additional-card__parameter-value {
+  @media screen and (min-width: $tablet-width) {
+    margin-left: 52px;
+  }
+}
+
+.additional-card__link-button {
+  grid-area: additional-card-link-button;
+}

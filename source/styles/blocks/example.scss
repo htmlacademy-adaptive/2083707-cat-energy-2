@@ -1,0 +1,311 @@
+.example {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "example-title"
+    "example-decription"
+    "example-list"
+    "example-compare";
+  gap: 20px;
+  padding: 24px 20px 40px;
+  background-color: #eaeaea;
+
+  @media screen and (min-width: $tablet-width) {
+    gap: 54px;
+    padding: 45px 30px 98px;
+    background-color: transparent;
+    background-image: linear-gradient(to top, $site-secondary-bg 462px, transparent 462px);
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    grid-template-columns: 436px 560px;
+    grid-template-areas:
+      "example-title      example-compare"
+      "example-decription example-compare"
+      "example-list       example-compare";
+    gap: 69px 224px;
+    justify-content: center;
+    padding: 0 110px 75px;
+    background-image: linear-gradient(transparent 135px, $site-secondary-bg 135px);
+  }
+}
+
+.example__title {
+  grid-area: example-title;
+  margin: 0 0 20px;
+  color: $dark-text;
+  letter-spacing: -0.9px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 5px;
+    letter-spacing: -1.2px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.example__description {
+  grid-area: example-decription;
+  margin: 0;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    align-items: end;
+    min-height: 171px;
+  }
+}
+
+.example__list {
+  grid-area: example-list;
+  display: grid;
+  grid-template-columns: 124px 124px;
+  grid-template-areas:
+    "example-weight example-time"
+    "example-cost   example-cost";
+  gap: 20px 31px;
+  margin: 0 auto;
+  padding: 0;
+
+  @media screen and (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+    grid-template-columns: 162px 162px 1fr;
+    grid-template-areas: "example-weight example-time example-cost";
+    gap: 43px;
+    width: calc($tablet-width - 60px);
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    grid-template-columns: 162px 162px;
+    gap: 54px 42px;
+    margin: 0;
+  }
+}
+
+.example__item {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.example__item-title {
+  align-self: center;
+  order: 2;
+  display: block;
+  margin: -14px auto 0;
+  padding: 0 9px;
+  max-width: 100%;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: lowercase;
+  white-space: wrap;
+  background-color: #eaeaea;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 14px;
+    background-color: $site-bg;
+    margin-top: -10px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 0 9px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+  }
+}
+
+.example__item-value {
+  order: 1;
+  margin-left: 0;
+  padding: 15px 10px 20px;
+  font-family: $title-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $dark-text;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 1px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-bottom: 23px;
+  }
+}
+
+.example__item--weight {
+  grid-area: example-weight;
+}
+
+.example__item--time {
+  grid-area: example-time;
+}
+
+.example__item-cost {
+  grid-area: example-cost;
+  display: flex;
+  white-space: nowrap;
+  justify-content: center;
+  font-family: $title-font;
+  line-height: 20px;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  @media screen and (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+    flex-direction: column;
+    text-align: end;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
+}
+
+.example__item-cost-title,
+.example__item-cost-value {
+  color: $dark-text;
+  text-transform: uppercase;
+  letter-spacing: 0.1px;
+}
+
+.example__item-cost-title {
+  @media screen and (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+    margin-top: -2px;
+    margin-bottom: 9px;
+  }
+}
+
+.example__item-cost-value {
+  margin-left: 3px;
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 63px;
+  }
+}
+
+.example__compare-container {
+  grid-area: example-compare;
+  position: relative;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  gap: 1px;
+  width: 280px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet-width) {
+    grid-template-columns: 280px 280px;
+    width: 560px;
+    margin-top: 48px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.example__compare-toggle {
+  position: absolute;
+  display: block;
+  z-index: 3;
+  width: 4px;
+  height: 256px;
+  padding: 0;
+  background-color: #666666;
+  border: none;
+  border-radius: 2px;
+  transform: translateX(137px);
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet-width) {
+    height: 512px;
+    transform: translateX(277px);
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 40px;
+    height: 40px;
+    content: "";
+    background-color: $site-bg;
+    border: 2px solid #666666;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 24px;
+    height: 18px;
+    content: "";
+    mask-image: url("../../icons/stack.svg#compare-slider-arrows");
+    background-color: #666666;
+    mask-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover,
+  &:focus,
+  &:hover::after,
+  &:focus::after {
+    background-color: #68b738;
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: #68b738;
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:active,
+  &:active::after {
+    background-color: #5eaa2f;
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    border-color: #5eaa2f;
+    opacity: 0.6;
+  }
+}
+
+.example__compare-image {
+  display: block;
+  width: auto;
+  height: 256px;
+  object-fit: cover;
+
+  @media screen and (min-width: $tablet-width) {
+    height: 512px;
+  }
+}
+
+.example__image-before img {
+  object-position: left;
+}
+
+.example__image-after img {
+  object-position: right;
+}

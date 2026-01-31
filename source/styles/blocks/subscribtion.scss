@@ -1,0 +1,123 @@
+.subscribtion {
+  display: flex;
+  flex-direction: column;
+  font-family: $title-font;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    margin-bottom: 104px;
+  }
+}
+
+.subscribtion__title {
+  margin: 0 0 31px 20px;
+  letter-spacing: -0.6px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 65px;
+    margin-left: 70px;
+    letter-spacing: -0.7px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 72px;
+    margin-left: 0;
+    letter-spacing: -0.85px;
+  }
+}
+
+.subscribtion__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+  }
+}
+
+.subscribtion__form-title {
+  margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $dark-text;
+  text-align: center;
+  letter-spacing: -0.5px;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+  }
+}
+
+.subscribtion__field-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: calc($tablet-width - 1px)) {
+    flex-direction: column;
+  }
+}
+
+.subscribtion__field {
+  width: 280px;
+  min-height: 56px;
+  padding: 13px;
+  font-size: 20px;
+  line-height: 20px;
+  color: $dark-gray-text-4;
+  border: 1px solid #e7e7e7;
+
+  @media screen and (max-width: calc($tablet-width - 1px)) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 376px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 496px;
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid $dark-gray-text-4;
+    box-shadow: none;
+  }
+}
+
+.subscribtion__field--error {
+  border: 2px solid #ff8282;
+}
+
+.subscribtion__field::placeholder {
+  font-family: $title-font;
+  color: $dark-gray-text-4;
+  text-transform: uppercase;
+}
+
+.subscribtion__button {
+  width: 100%;
+  min-height: 56px;
+  font-size: 20px;
+  line-height: 26px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 256px;
+  }
+}

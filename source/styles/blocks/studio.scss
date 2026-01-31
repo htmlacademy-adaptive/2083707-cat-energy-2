@@ -1,0 +1,27 @@
+.studio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.studio__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: $dark-gray-text-4;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-left: 5px;
+  }
+}
+
+.studio:hover svg,
+.studio:focus svg {
+  fill: #68b738;
+}
+
+.studio:active {
+  opacity: 0.3;
+}
