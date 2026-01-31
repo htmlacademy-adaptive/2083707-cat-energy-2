@@ -16,12 +16,11 @@
 .working-principles__title {
   margin-top: 0;
   margin-bottom: 41px;
+  font-weight: 400;
   color: $dark-text;
-  letter-spacing: -0.8px;
 
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 32px;
-    letter-spacing: -1.3px;
   }
 }
 

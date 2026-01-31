@@ -26,7 +26,7 @@
       <picture>
         <source media="(min-width:1440px)" width="118" height="21" type="image/svg+xml" srcset="images/common/logo-text-tablet.svg">
         <source media="(min-width:768px)" width="101" height="18" type="image/svg+xml" srcset="images/common/logo-text-tablet.svg">
-        <img src="images/common/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
+        <img src="images/common/logo-text-mobile.svg" width="102" height="18" alt="Cat energy.">
       </picture>
       <span class="visually-hidden">Переход на главную страницу Cat Energy.</span>
     </a>
@@ -328,7 +328,17 @@
         <h2 class="address__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
         <address class="address__info"><span>ул. Большая<br> Конюшенная, д. 19/8</span> <span class="address__city">Санкт-Петербург</span></address>
       </div>
-      <iframe class="address__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1730ffaf2384e1e8f979b1b6111c494e746fb3544c91f9c7dfaa589d7f621c98&amp;source=constructor" width="320" height="362"></iframe>
+      <div class="address__map">
+        <picture class="address__image">
+          <source media="(min-width: 1440px)" width="1440" height="400" type="image/webp" srcset="images/common/map-desktop@1x.webp, images/common/map-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" width="768" height="400" type="image/webp" srcset="images/common/map-tablet@1x.webp, images/common/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="images/common/map-mobile@1x.webp 1x, images/common/map-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" width="1440" height="400" type="image/png" srcset="images/common/map-desktop@1x.png, images/common/map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" width="768" height="400" type="image/png" srcset="images/common/map-tablet@1x.png, images/common/map-tablet@2x.png 2x">
+          <img src="images/common/map-mobile@1x.png" srcset="images/common/map-mobile@2x.png 2x" width="320" height="362" alt="Баночка с кошачьим питанием, со вкусом курицы.">
+        </picture>
+        <iframe class="address__iframe address__iframe--nojs" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1730ffaf2384e1e8f979b1b6111c494e746fb3544c91f9c7dfaa589d7f621c98&amp;source=constructor" width="320" height="362"></iframe>
+      </div>
     </section>
   </main>
   <footer class="main-footer">

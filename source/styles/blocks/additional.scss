@@ -14,17 +14,15 @@
 .additional__title {
   margin: 0 0 35px 20px;
   font-family: $title-font;
-  letter-spacing: -0.6px;
+  font-weight: 400;
 
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 80px;
     margin-left: 70px;
-    letter-spacing: -0.7px;
   }
 
   @media screen and (min-width: $desktop-width) {
     margin-left: 0;
-    letter-spacing: -0.85px;
   }
 }
 

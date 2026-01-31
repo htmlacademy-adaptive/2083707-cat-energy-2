@@ -1,0 +1,39 @@
+.catalog-section-title {
+  position: relative;
+  width: fit-content;
+  font-size: 24px;
+  line-height: 100%;
+  color: $dark-text;
+  background-color: $site-bg;
+  box-shadow: -40px 0 0 0 $site-bg, 40px 0 0 0 $site-bg;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 32px;
+    box-shadow: -40px 0 0 0 $site-bg, 40px 0 0 0 $site-bg;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 40px;
+  }
+}
+
+.catalog-section-title::before {
+  position: absolute;
+  top: 9px;
+  right: 0;
+  z-index: -1;
+  display: block;
+  width: 100vw;
+  height: 2px;
+  content: "";
+  background-color: $primary-decoration-color;
+  box-shadow: 100vw 0 0 0 $primary-decoration-color;
+
+  @media screen and (min-width: $tablet-width) {
+    top: 13px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    top: 17px;
+  }
+}

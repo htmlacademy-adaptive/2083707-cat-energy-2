@@ -1,0 +1,24 @@
+.primary-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: $title-font;
+  line-height: 20px;
+  color: $light-text;
+  text-transform: uppercase;
+  background-color: $primary-decoration-color;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($light-text, 0.3);
+    background-color: #5eaa2f;
+  }
+}
